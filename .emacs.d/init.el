@@ -11,8 +11,8 @@
 (set-keyboard-coding-system 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (keyboard-translate ?\C-h ?\C-?)
-;; (require 'cask "~/.cask/cask.el")
-(require 'cask) ;; for mac
+(require 'cask "~/.cask/cask.el")
+;; (require 'cask) ;; for mac
 (cask-initialize)
 (load-theme 'deeper-blue t)
 
