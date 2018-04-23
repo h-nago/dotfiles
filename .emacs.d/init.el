@@ -14,7 +14,7 @@
 (require 'cask "~/.cask/cask.el")
 ;; (require 'cask) ;; for mac
 (cask-initialize)
-(load-theme 'deeper-blue t)
+(load-theme 'manoj-dark t)
 
 (require 'web-mode)
 
