@@ -11,8 +11,8 @@
 (set-keyboard-coding-system 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (keyboard-translate ?\C-h ?\C-?)
-(require 'cask "~/.cask/cask.el")
-;; (require 'cask) ;; for mac
+;; (require 'cask "~/.cask/cask.el")
+(require 'cask) ;; for mac
 (cask-initialize)
 (load-theme 'manoj-dark t)
 
@@ -20,10 +20,20 @@
 
 (add-to-list 'auto-mode-alist '("\\.erb"       . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html"     . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
 
 (defun web-mode-hook ()
   "Hooks for Web mode."
   (setq web-mode-tag-auto-close-style 2)
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  (setq tab-width 2)
+  ;; jsx用
+  (if (equal web-mode-content-type "javascript")
+      (web-mode-set-content-type "jsx")
+    (message "now set to: %s" web-mode-content-type)
+    )
   )
 (add-hook 'web-mode-hook 'web-mode-hook)
 
@@ -41,12 +51,12 @@
             (setq js-indent-level 2)))
 (setq js-indent-level 2)
 
-(add-to-list 'auto-mode-alist '(".*\\.js\\'" . rjsx-mode))
-(add-hook 'rjsx-mode-hook
-          (lambda ()
-            (setq indent-tabs-mode nil) ;;インデントはタブではなくスペース
-            (setq js-indent-level 2) ;;スペースは２つ、デフォルトは4
-            (setq js2-strict-missing-semi-warning nil))) ;;行末のセミコロンの警告はオフ
+;; (add-to-list 'auto-mode-alist '(".*\\.js\\'" . rjsx-mode))
+;; (add-hook 'rjsx-mode-hook
+;;          (lambda ()
+            ;; (setq indent-tabs-mode nil) ;;インデントはタブではなくスペース
+            ;; (setq js-indent-level 2) ;;スペースは２つ、デフォルトは4
+            ;; (setq js2-strict-missing-semi-warning nil))) ;;行末のセミコロンの警告はオフ
 
 (add-hook 'go-mode-hook
           (lambda ()
