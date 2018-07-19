@@ -1,5 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
+colorscheme hybrid
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -28,7 +29,10 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
-
+Plugin 'chr4/nginx.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'chase/vim-ansible-yaml'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -48,3 +52,9 @@ filetype plugin indent on    " required
 set expandtab
 set tabstop=2
 set shiftwidth=2
+set term=xterm-256color
+syntax on
+set number
+set cursorline
+set cursorcolumn
+
