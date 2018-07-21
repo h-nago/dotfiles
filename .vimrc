@@ -1,6 +1,5 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
-colorscheme hybrid
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -57,4 +56,4 @@ syntax on
 set number
 set cursorline
 set cursorcolumn
-
+let g:indent_guides_enable_on_vim_startup = 1
