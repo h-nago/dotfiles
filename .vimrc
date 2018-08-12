@@ -31,8 +31,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'chr4/nginx.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'chase/vim-ansible-yaml'
-Plugin 'nathanaelkane/vim-indent-guides'
-
+Plugin 'Yggdroot/indentLine'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -56,4 +55,6 @@ syntax on
 set number
 set cursorline
 set cursorcolumn
-let g:indent_guides_enable_on_vim_startup = 1
+let g:NERDTreeDirArrowExpandable = '>'
+let g:NERDTreeDirArrowCollapsible = '>'
+colorscheme darkblue
