@@ -1,3 +1,4 @@
+autocmd!
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -32,6 +33,7 @@ Plugin 'chr4/nginx.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'Yggdroot/indentLine'
+Plugin 'jwalton512/vim-blade'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -58,3 +60,6 @@ set cursorcolumn
 let g:NERDTreeDirArrowExpandable = '>'
 let g:NERDTreeDirArrowCollapsible = '>'
 colorscheme darkblue
+set backspace=indent,start
+
+autocmd FileType ruby set dictionary=~/.vim/dict/ruby
