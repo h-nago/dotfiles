@@ -34,6 +34,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'Yggdroot/indentLine'
 Plugin 'jwalton512/vim-blade'
+Plugin 'posva/vim-vue'
+Plugin 'leafgarland/typescript-vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -63,3 +65,5 @@ colorscheme darkblue
 set backspace=indent,start
 
 autocmd FileType ruby set dictionary=~/.vim/dict/ruby
+autocmd FileType vue syntax sync fromstart
+set clipboard+=unnamed

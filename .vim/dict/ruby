@@ -2,3 +2,4 @@ puts
 fixture_file_upload
 forbidden
 unprocessable_entity
+find_or_initialize_by
