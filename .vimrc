@@ -36,6 +36,8 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'jwalton512/vim-blade'
 Plugin 'posva/vim-vue'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'othree/html5.vim'
+Plugin 'editorconfig/editorconfig-vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
