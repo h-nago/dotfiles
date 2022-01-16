@@ -17,3 +17,9 @@ nmap <silent> rn <Plug>(coc-rename)
 " Coc Prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 nmap <Leader>f <Plug>(coc-format-selected)
+
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocAction('format')
+nmap <silent> fm :Format <CR>
+
+autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
