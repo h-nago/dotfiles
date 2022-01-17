@@ -1,3 +1,17 @@
 {
-	"solargraph.formatting": true
+  "solargraph.formatting": true,
+  "languageserver": {
+    "terraform": {
+      "command": "terraform-ls",
+      "args": [
+        "serve"
+      ],
+      "filetypes": [
+        "terraform",
+        "tf"
+      ],
+      "initializationOptions": {},
+      "settings": {}
+    }
+  }
 }
