@@ -1,3 +1,9 @@
+set clipboard=unnamed
+set number
+set expandtab
+set tabstop=2
+set shiftwidth=2
+
 call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ctrlpvim/ctrlp.vim'
@@ -13,13 +19,7 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
 " Symbol renaming.
 nmap <silent> rn <Plug>(coc-rename)
-
-" Coc Prettier
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-nmap <Leader>f <Plug>(coc-format-selected)
-
-" Add `:Format` command to format current buffer.
-command! -nargs=0 Format :call CocAction('format')
-nmap <silent> fm :Format <CR>
-
+" Format
+nmap <silent> fm :call CocAction('format')<CR>
+" typescript linux
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
