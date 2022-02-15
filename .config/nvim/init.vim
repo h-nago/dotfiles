@@ -8,6 +8,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'lambdalisue/fern.vim'
+Plug 'brooth/far.vim'
+Plug 'vim-latex/vim-latex'
 call plug#end()
 
 " Ctrl+nでファイルツリーを表示/非表示する
@@ -23,3 +25,6 @@ nmap <silent> rn <Plug>(coc-rename)
 nmap <silent> fm :call CocAction('format')<CR>
 " typescript linux
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
+
+" Tex Compiler
+let g:Tex_CompileRule_pdf = 'lualatex -synctex=1 -interaction=nonstopmode -file-line-error-style $*'
